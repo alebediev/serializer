@@ -3,7 +3,7 @@
   "description": "Serializer to JSON, YAML, XML",
   "keywords": ["Serializer", "json", "yaml", "xml"],
   "type": "project",
-  "license": "BSD-3-Clause",
+  "license": "",
   "authors": [
     {
       "name": "Andrii Lebedeiv",
