@@ -1,13 +1,12 @@
 <?php
 
-
-namespace App;
+namespace ALebediev\Serializer;
 
 
 final class SerializeToJSON extends AbstractSerializer implements SerializerInterface
 {
-   public function serialize(object $object)
+   public function serialize($object)
    {
-       // TODO: Implement serialize() method.
+       return \json_encode($this->objectToArray($object));
    }
 }

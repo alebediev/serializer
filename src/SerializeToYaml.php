@@ -1,12 +1,13 @@
 <?php
 
-namespace App;
+namespace ALebediev\Serializer;
 
+use Symfony\Component\Yaml\Yaml;
 
 final class SerializeToYaml extends AbstractSerializer implements SerializerInterface
 {
-    public function serialize(object $object)
+    public function serialize($object)
     {
-        // TODO: Implement serialize() method.
+        return Yaml::dump($this->objectToArray($object));
     }
 }

@@ -1,12 +1,16 @@
 <?php
 
-namespace App;
+namespace ALebediev\Serializer;
 
+
+
+
+use Spatie\ArrayToXml\ArrayToXml;
 
 class SerializeToXML extends AbstractSerializer implements SerializerInterface
 {
-    public function serialize(object $object)
+    public function serialize($object)
     {
-        // TODO: Implement serialize() method.
+        return ArrayToXml::convert($this->objectToArray($object));
     }
 }
