@@ -1,13 +1,14 @@
+#!/usr/bin/env php
 <?php
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use ALebediev\Serializer\Test\TestObject;
-use ALebediev\Serializer\{SerializeToJSON, SerializeToXML, SerializeToYaml};
+use ALebediev\Serializer\{JsonSerializer, XmlSerializer, YamlSerializer};
 
-$jsonSerializer = new SerializeToJSON();
-$xmlSerializer = new SerializeToXML();
-$yamlSerializer = new SerializeToYaml();
+$jsonSerializer = new JsonSerializer();
+$xmlSerializer = new XmlSerializer();
+$yamlSerializer = new YamlSerializer();
 
 $testStudent_1 = new TestObject('User 1', 23, ['php-basic']);
 $testStudent_2 = new TestObject('User 2', 30, [['php-basic', 'php-advance'],'python']);

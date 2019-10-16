@@ -5,7 +5,7 @@ namespace ALebediev\Serializer;
 abstract class AbstractSerializer
 {
 
-    private function preparePrivatAndProtectedProperties($key)
+    private function preparePrivateAndProtectedProperties($key)
     {
         $pos = strpos($key, "\0");
         $key = substr_replace($key, 'CROPSTART', $pos , strlen("\0"));
@@ -20,7 +20,7 @@ abstract class AbstractSerializer
         foreach ((array) $object as $key => $value){
 
             if(strpos($key, "\0") !== false){
-                $key = $this->preparePrivatAndProtectedProperties($key);
+                $key = $this->preparePrivateAndProtectedProperties($key);
             }
 
             if(is_array($value) || is_object($value)){

@@ -2,12 +2,9 @@
 
 namespace ALebediev\Serializer;
 
-
-
-
 use Spatie\ArrayToXml\ArrayToXml;
 
-class SerializeToXML extends AbstractSerializer implements SerializerInterface
+class XmlSerializer extends AbstractSerializer implements SerializerInterface
 {
     public function serialize($object)
     {

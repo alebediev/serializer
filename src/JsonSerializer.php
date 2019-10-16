@@ -3,7 +3,7 @@
 namespace ALebediev\Serializer;
 
 
-final class SerializeToJSON extends AbstractSerializer implements SerializerInterface
+final class JsonSerializer extends AbstractSerializer implements SerializerInterface
 {
    public function serialize($object)
    {

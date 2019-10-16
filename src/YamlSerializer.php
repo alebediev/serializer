@@ -4,7 +4,7 @@ namespace ALebediev\Serializer;
 
 use Symfony\Component\Yaml\Yaml;
 
-final class SerializeToYaml extends AbstractSerializer implements SerializerInterface
+final class YamlSerializer extends AbstractSerializer implements SerializerInterface
 {
     public function serialize($object)
     {

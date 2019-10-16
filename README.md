@@ -1,15 +1,14 @@
 alebediev/serializer
 ===============
 
-This project helps to serialize objects of different classes into JSON, YAML and XML formats. 
+This library helps to serialize objects of different classes into JSON, YAML and XML formats. 
 
 Installation
 ------------
 
+Use the following command to add this library in your project:
 ```
-$ git clone https://github.com/alebediev/serializer.git <your-project-name>
-$ cd <your-project-name>
-$ composer install
+composer require alebediev/serializer
 ```
 
 Usage
@@ -18,13 +17,13 @@ Usage
 ```php
 <?php
 
-use ALebediev\Serializer\{SerializeToJSON, SerializeToXML, SerializeToYaml};
+use ALebediev\Serializer\{JsonSerializer, XmlSerializer, YamlSerializer};
 
 ...
 
-$jsonSerializer = new SerializeToJSON();
-$xmlSerializer = new SerializeToXML();
-$yamlSerializer = new SerializeToYaml();
+$jsonSerializer = new JsonSerializer();
+$xmlSerializer = new XmlSerializer();
+$yamlSerializer = new YamlSerializer();
 
 $testStudent = new TestObject('User 2', 30, [['php-basic', 'php-advance'],'python']);
 
@@ -37,3 +36,11 @@ echo "----XML:" . PHP_EOL;
 echo $xmlSerializer->serialize($testStudent) . PHP_EOL;
 
 ```
+
+
+License
+-------
+
+MIT [license](LICENSE).
+
+Copyright (c) 2019 Andrii Lebediev

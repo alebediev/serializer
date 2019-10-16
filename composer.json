@@ -2,8 +2,9 @@
   "name": "alebediev/serializer",
   "description": "Serializer to JSON, YAML, XML",
   "keywords": ["Serializer", "json", "yaml", "xml"],
-  "type": "project",
-  "license": "",
+  "homepage": "https://github.com/alebediev/serializer",
+  "license": "MIT",
+  "type": "library",
   "authors": [
     {
       "name": "Andrii Lebedeiv",
@@ -16,8 +17,6 @@
     "symfony/yaml": "^4.3",
     "spatie/array-to-xml": "^2.11"
   },
-  "require-dev": {
-  },
   "autoload": {
     "psr-4": {
       "ALebediev\\Serializer\\": "src/"
@@ -27,7 +26,5 @@
     "psr-4": {
       "ALebediev\\Serializer\\Test\\": "tests/"
     }
-  },
-  "scripts": {
   }
 }
